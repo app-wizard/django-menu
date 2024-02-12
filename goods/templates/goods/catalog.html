@@ -59,11 +59,14 @@
                             <!-- Product -->
                             <div class="col-lg-4 col-md-6 p-4">
                                 <div class="card border-primary rounded custom-shadow">
-                                    {% if product.image %}
-                                    <img src="{{ product.image.url }}" class="card-img-top" alt="{{ product.name }}">
+                                    {% if "placeholder" in product.image.url %}
+                                    <img class="card-img-top" src="{% static 'deps/images/Not found image.png' %}"
+                                      alt="placeholder image">
                                     {% else %}
-                                    <img src="{% static 'deps/images/Not found image.png' %}" class="card-img-top" alt="...">
+                                    <img class="card-img-top" src=" {{ product.image.url }}"
+                                      alt="{{ product.name }}">
                                     {% endif %}
+
                                     <div class="card-body">
                                         <a href="{% url "catalog:product" product.slug %}" class="stretched-link">
                                             <p class="card-title">{{ product.name }}</p>
