@@ -1,1 +1,1 @@
-web: gunicorn django-menu.wsgi
+web: gunicorn app.wsgi
