@@ -22,3 +22,6 @@ urlpatterns = [
     path('', include("main.urls", namespace="main")),
     path("catalog/", include("goods.urls", namespace="catalog")),
 ]
+
+
+handler404 = "main.views.page_not_found_view"
