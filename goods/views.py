@@ -23,3 +23,12 @@ def catalog(request, category_slug=None):
         "slug_url": category_slug,
     }
     return render(request, "goods/catalog.html", context)
+
+
+def product(request, product_slug):
+    product_item = Products.objects.get(slug=product_slug)
+
+    context = {
+        "product": product_item,
+    }
+    return render(request, "goods/product.html", context)
