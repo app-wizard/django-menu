@@ -1,5 +1,5 @@
 from django.core.paginator import Paginator
-from django.shortcuts import get_list_or_404, get_object_or_404, render, reverse
+from django.shortcuts import get_object_or_404, render, reverse
 from django.contrib import messages
 from django.http import HttpResponseRedirect
 from goods.form import CommentForm

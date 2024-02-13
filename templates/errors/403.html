@@ -1,0 +1,40 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'deps/css/bootstrap/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'deps/css/my_css.css' %}">
+    <title>403 Forbidden</title>
+    <style>
+        body {
+            padding-top: 50px;
+            background-color: #f8f9fa;
+        }
+        .error-page {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .error-page img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="error-page">
+            <img src="{{% static "deps\images\404img.jpg" %}}}" alt="Lost Sushi Plate">
+            <h1>Oops!</h1>
+            <h2>403 Forbidden</h2>
+            <a href="/" class="btn btn-primary">Go to Homepage</a>
+        </div>
+    </div>
+    <script src="{% static 'deps/js/jquery/jquery-3.7.0.min.js' %}"></script>
+    <script src="{% static 'deps/js/bootstrap/bootstrap.bundle.min.js' %}"></script>
+</body>
+</html>

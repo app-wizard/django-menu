@@ -1,7 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from django.template import loader
-from django.http import HttpResponseNotFound
+
 
 
 # Create your views here.
@@ -32,11 +31,3 @@ def delivery(request):
         "text_on_page": "Lotus Pavilion offers a swift and reliable Japanese cuisine delivery service across the city and its suburbs. Place your orders via our easy-to-use website or mobile app, and enjoy real-time tracking for your convenience. Our delivery options are designed to fit your busy schedule, including an express service for immediate cravings. We're committed to eco-friendly practices, using sustainable packaging for all orders. For assistance or to place an order by phone, contact us at (123) 456-7890. Experience the authentic taste of Japan with Lotus Pavilion's exceptional delivery service, where quality and customer satisfaction are always our top priorities.",
     }
     return render(request, "main/about.html", context)
-
-
-def custom_404(request, exception):
-    """
-    Custom 404
-    """
-    template = loader.get_template("404.html")
-    return HttpResponseNotFound(template.render({}, request))
