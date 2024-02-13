@@ -21,13 +21,13 @@ def catalog(request, category_slug=None):
     elif query:
         goods = q_search(query)
     else:
-        goods = get_list_or_404(Products.objects.filter(category__slug=category_slug))
-
-    if on_sale:
-        goods = goods.filter(discount__gt=0)
+        goods = Products.objects.filter(category__slug=category_slug)
 
     if order_by and order_by != "default":
         goods = goods.order_by(order_by)
+    
+    if on_sale:
+        goods = goods.filter(discount__gt=0)
 
     paginator = Paginator(goods, 3)
     curent_page = paginator.page(int(page))
