@@ -68,10 +68,13 @@
                         </li>
                         {% endif %}
                     </ul>
-                     <form class="d-flex" role="search" action="{% url 'catalog:search' %}"  method="get">
-                        <input class="form-control me-2" type="search" name="q" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success text-white" type="submit">Search</button>
-                    </form> 
+                    <form id="searchForm" class="d-flex" role="search" action="{% url 'catalog:search' %}" method="get">
+                        <input class="form-control me-2" type="search" name="q" placeholder="Search" aria-label="Search" id="searchInput">
+                        <button class="btn btn-outline-success text-white" type="submit" id="searchButton">Search</button>
+                    </form>                    
+                    <div id="searchError" style="display: none; color: red; margin-top: 5px;">
+                        Please enter a search query.
+                    </div>
                 </div>
             </div>
         </nav>
@@ -114,6 +117,7 @@
 
     <script src="{% static 'deps/js/jquery/jquery-3.7.0.min.js' %}"></script>
     <script src="{% static 'deps/js/bootstrap/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'deps/js/search.js' %}"></script>
     {% block extras %}
     {% endblock %}
 </body>

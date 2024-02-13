@@ -71,3 +71,7 @@ body {
   margin-top: 30px; 
   padding: 20px; 
 }
+
+input.placeholder-error::placeholder {
+  color: red;
+}
