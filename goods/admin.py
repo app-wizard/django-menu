@@ -1,6 +1,7 @@
 from django.contrib import admin
 from goods.models import Categories, Products, Comment
 
+
 # Register your models here.
 @admin.register(Categories)
 class CategoriesAdmin(admin.ModelAdmin):
