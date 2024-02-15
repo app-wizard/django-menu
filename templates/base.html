@@ -8,8 +8,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lotus Pavilion offers a unique blend of traditional and modern Asian cuisine. Explore our menu and experience the best of Asian dining.">
+    <meta name="keywords" content="Lotus Pavilion, Asian, Cuisine, Food, Dining ">
     <link rel="stylesheet" href="{% static 'deps/css/bootstrap/bootstrap.min.css' %}">
     <link rel="stylesheet" href="{% static 'deps/css/my_css.css' %}">
+
+    <script type="application/ld+json">
+        {
+          "@context": "http://schema.org",
+          "@type": "Restaurant",
+          "name": "Lotus Pavilion",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "123 Main Street",
+            "addressLocality": "City",
+            "postalCode": "12345",
+            "addressCountry": "Country"
+          },
+          "telephone": "+1234567890"
+        }
+    </script>
 
     {% block css %}
     {% endblock %}
