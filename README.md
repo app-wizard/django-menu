@@ -1,5 +1,5 @@
 # Lotus Pavilion - Asian Cuisine Web Menu
- - ![Lotus Pavilion](medialotus.png)
+ - ![Lotus Pavilion](./media/lotus.png)
 
 ## Table of Contents
 1. [Link to Website](https://django-menu-87d486944791.herokuapp.com/)
