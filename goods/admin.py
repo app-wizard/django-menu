@@ -3,6 +3,7 @@ from goods.models import Categories, Products, Comment
 
 
 # Register your models here.
+
 @admin.register(Categories)
 class CategoriesAdmin(admin.ModelAdmin):
     list_display = ("name", "slug")

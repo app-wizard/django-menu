@@ -240,3 +240,33 @@ Responsiveness was meticulously tested across various devices, from the compact 
 #### W3C Markup Validator:
 
 The W3C Markup Validator were used to validate the HTML on all pages of the project to ensure there were no syntax errors in there. To validate the HTML files all Django template tags were manually removed with the HTML code copied and inserted to the base template.
+
+Home page:
+![Home page](media\valid1.jpg)
+
+Delivery page:
+![Delivery page](media\valid2.jpg)
+
+About Us page:
+![About Us page](media\valid3.jpg)
+
+Profile page:
+![Profile Us page](media\valid4.jpg)
+
+Catalog page:
+![Catalog Us page](media\valid5.jpg)
+
+Product page:
+![Product Us page](media\valid6.jpg)
+
+#### JSHint:
+
+JSHint was used to validate the JavaScript with no errors highlighted.
+
+![Jshint](media\jshint.jpg)
+
+#### PEP8 Online:
+
+PEP8 Online linter (Python validator) The code passed without any errors on all files tested:
+
+#### Lighthouse:

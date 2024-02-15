@@ -1,20 +1,18 @@
 from django.contrib.auth.decorators import login_required
 from django.contrib import auth, messages
 from django.http import HttpResponseRedirect
-from django.shortcuts import  redirect, render
+from django.shortcuts import redirect, render
 from django.urls import reverse
-
 from users.form import ProfileForm, UserLoginForm, UserRegistrationForm
 
-
-
 def login(request):
+    """View function for user login."""
     if request.method == 'POST':
         form = UserLoginForm(data=request.POST)
         if form.is_valid():
             username = request.POST['username']
             password = request.POST['password']
-            user= auth.authenticate(username=username, password=password)
+            user = auth.authenticate(username=username, password=password)
             if user:
                 auth.login(request, user)
                 messages.success(request, f'You have successfully logged in as {username}')
@@ -28,9 +26,8 @@ def login(request):
     }
     return render(request, 'users/login.html', context)
 
-
 def registration(request):
-
+    """View function for user registration."""
     if request.method == 'POST':
         form = UserRegistrationForm(data=request.POST)
         if form.is_valid():
@@ -50,14 +47,15 @@ def registration(request):
 
 @login_required
 def profile(request):
+    """View function for user profile."""
     if request.method == 'POST':
-        form = ProfileForm(data=request.POST,instance = request.user, files=request.FILES)
+        form = ProfileForm(data=request.POST, instance=request.user, files=request.FILES)
         if form.is_valid():
             form.save()
             messages.success(request, 'Your profile has been successfully updated')
             return HttpResponseRedirect(reverse('user:profile'))
     else:
-        form = ProfileForm(instance = request.user)
+        form = ProfileForm(instance=request.user)
 
     context = {
         "title": "Home - Account",
@@ -67,6 +65,7 @@ def profile(request):
 
 @login_required
 def logout(request):
+    """View function for user logout."""
     messages.success(request, "You\'ve successfully logged off")
     auth.logout(request)
     return redirect(reverse('main:index'))

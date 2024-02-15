@@ -1,9 +1,10 @@
 from django.test import TestCase, RequestFactory
 from django.urls import reverse
 from django.contrib.auth import get_user_model
-from . import views 
+from . import views
 
 User = get_user_model()
+
 
 class URLAccessTests(TestCase):
     def setUp(self):
@@ -33,6 +34,7 @@ class URLAccessTests(TestCase):
         """
         response = self.client.get(reverse('goods:index', kwargs={'category_slug': 'all'}))
         self.assertEqual(response.status_code, 200)
+
 
 class ErrorPagesTests(TestCase):
     def setUp(self):

@@ -1,16 +1,21 @@
 from django.contrib.auth.models import AbstractUser
 from cloudinary.models import CloudinaryField
 
-#Create your models here.
 class User(AbstractUser):
-    # image = models.ImageField(upload_to="users_images", blank=True, null=True)
+    """
+    Custom user model extending AbstractUser to include additional fields.
+    """
+    # Use CloudinaryField for storing user images
     image = CloudinaryField('image', blank=True, null=True)
 
     class Meta:
         db_table = "user"
         verbose_name = "user"
         verbose_name_plural = "users"
-        ordering: list[str] = ["id"]
+        ordering = ["id"]  # Corrected the assignment operator to '='
 
     def __str__(self):
+        """
+        Return the string representation of the user (username).
+        """
         return f"{self.username}"

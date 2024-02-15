@@ -79,7 +79,7 @@
             </div>
         </nav>
     </header>
-    <section>
+    <div>
         <div class="container">
             <div class="row mt-1 position-fixed z-3">
                 <div class="dropdown mb-2">
@@ -110,13 +110,15 @@
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
     {% block footer %}
     {% endblock %}
 
     <script src="{% static 'deps/js/jquery/jquery-3.7.0.min.js' %}"></script>
     <script src="{% static 'deps/js/bootstrap/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'deps/js/jquery-events.js' %}"></script>
+    <script src="{% static 'deps/js/jquery-ajax.js' %}"></script>
     <script src="{% static 'deps/js/search.js' %}"></script>
     {% block extras %}
     {% endblock %}
