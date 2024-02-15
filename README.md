@@ -385,6 +385,16 @@ This project is hosted on Heroku with a PostgreSQL database managed through Elep
 - Use the terminal to add, commit, and push your changes to Heroku.
 - In Heroku, go to the 'Deploy' tab, deploy your branch, and then access your application by clicking 'Open App'.
 
+## Credits
+  - [Django documentation:](https://docs.djangoproject.com/en/4.2/) Everything you need to know about Django.
+  - [Bootstrap documentation:](https://getbootstrap.com/docs/5.3/getting-started/introduction/) Bootstrap documentation used for styling and to build responsive web pages.
+  - [Code Institute:](https://codeinstitute.net/)  I Think Therefore I Blog.
+  - [Code Institute Slack Community:](https://app.slack.com/) Slack community for troubleshooting and FAQ.
+  - [Code Institute Tutor Support:](https://app.slack.com/) For help and support.
+  - [Stack Overflow:](https://stackoverflow.com) For troubleshooting and FAQ.
+  - [Unsplash:](https://unsplash.com/photos/NtkCemIfaiU) Man fishing on river at daytime photo, Chris Sarsgard.
+  - [W3Schools:](https://www.w3schools.com) Online Web Tutorials.
+  
 ### Acknowledgements
 
   - "I would like to extend my heartfelt thanks to Brian Macharia from Code Institute for his invaluable code reviews, assistance, and feedback throughout the development of this project. His guidance has been greatly appreciated.
