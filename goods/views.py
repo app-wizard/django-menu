@@ -63,6 +63,7 @@ def product(request, product_slug):
         "comments": comments,
         "comment_count": comment_count,
         "comment_form": comment_form,
+        "title": "DISH DETAILS",
     }
     return render(request, "goods/product.html", context)
 
