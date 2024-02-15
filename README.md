@@ -1,4 +1,22 @@
 # Lotus Pavilion - Asian Cuisine Web Menu
+ - ![Lotus Pavilion](media\lotus.png)
+
+## Table of Contents
+1. [Start](#Lotus Pavilion)
+2. [Introduction](#introduction)
+3. [Project Goal](#project-goal)
+4. [Strategy](#strategy)
+5. [User Stories](#user-stories)
+6. [Features](#features)
+7. [Design](#design)
+8. [Data Model](#data-model)
+9. [Technology Stack](#technology-stack)
+10. [Testing](#testing)
+11. [Bugs and Solutions](#bugs-and-solutions)
+12. [Deployment](#deployment)
+13. [Credits](#credits)
+14. [Acknowledgements](#acknowledgements)
+
 
 Welcome to the Lotus Pavilion, an Asian cuisine restaurant that brings the convenience of exploring our diverse menu right to your fingertips. My project, hosted at [herokuapp.com](https://django-menu-87d486944791.herokuapp.com/), offers a web version of our restaurant's menu, designed to enhance the dining experience of our guests even before an attendant presents them with a physical menu. By simply scanning a QR code found on promotional materials within the establishment, visitors can delve into our offerings, enjoying an intuitive navigation system for searching and sorting dishes. Additionally, our web menu features a review functionality for dishes, aiding in decision-making and distinguishing our service in a competitive market.
 
@@ -53,8 +71,7 @@ For detailed descriptions and acceptance criteria of each user story, please vis
 
 - **Homepage**
   - The homepage greets visitors with a captivating slogan and a photograph of the restaurant's interior, immersing them in the ambiance of Asian cuisine.
-  - ![Homepage](media\scrhome.jpg)
-
+  - 
 - **Menu Navigation Button**
   - This functional button enables visitors to view all dishes or navigate to specific categories within the menu.
   - ![Menu Navigation](media\scrnav.jpg)
@@ -101,7 +118,7 @@ For detailed descriptions and acceptance criteria of each user story, please vis
 
 - **Filtering Functionality**
   - Allows users to filter dishes by discounts and sort them by ascending or descending prices.
-  - ![Filtering Functionality Screenshot Placeholder](media\scrfilter.jpg)
+  - ![Filtering Functionality](media\scrfilter.jpg)
 
 - **Product Page**
   - By clicking on a dish card, users are taken to a detailed page where they can view an enlarged photo, and read or leave comments.
@@ -129,6 +146,7 @@ In addition to addressing the currently unimplemented user stories, future enhan
 - **Collect Feedback**: Creating a platform for customers to provide feedback on dishes and services, fostering a community and improving customer satisfaction.
 
 Further improvements are aimed at enhancing the user registration process by:
+
 - Enabling login through Google and social media platforms for a more streamlined and convenient user experience.
 - Providing users with the ability to delete their accounts, ensuring a transparent and trustful interaction with the service.
 
@@ -142,6 +160,7 @@ The design of the Lotus Pavilion web menu is a testament to the fusion of tradit
 The color scheme is a thoughtful selection of earthy tones, accented with the vibrant hues of Asian spices and the serene ambiance of a traditional lotus pond at dusk. This palette is harmoniously paired with a clean and contemporary typography that balances the visual warmth with crisp readability.
 
 ### Responsiveness and Interactivity
+![Lotus Pavilion](media\resp.jpg)
 Attention to responsive design ensures that the site's allure is preserved across all devices, offering an inviting and seamless experience whether on desktop or mobile. Interactive elements, such as the filter dropdown and search functionality, are designed for intuitive engagement, inviting users to explore the menu with ease.
 
 ### Imagery and Aesthetics
@@ -212,7 +231,6 @@ For managing these images, [Cloudinary](https://cloudinary.com/)'s cloud-based p
 These tools and extensions have been instrumental in building a robust and user-friendly web application, ensuring a streamlined workflow and high-quality code.
 
 #### Web Applications Used for Development and Testing:
-- [Am I Responsive](http://ami.responsivedesign.is): To check the responsiveness of the application.
 - [Chrome DevTools](https://developer.chrome.com/docs/devtools/): For testing, debugging, and performance analysis.
 - [HTML Validator](https://validator.w3.org/) and [W3 CSS Validator](https://jigsaw.w3.org/css-validator/): To validate HTML and CSS files.
 - [JSHint](https://jshint.com/): To check JavaScript code quality.
@@ -234,7 +252,7 @@ Additionally, mobile testing was conducted on iOS devices with Safari Version 15
 - iPhone 12 Pro Max running iOS 17.3
 
 ### Responsiveness
-
+![Home page](media\resp.jpg)
 Responsiveness was meticulously tested across various devices, from the compact iPhone 5 screen (320px wide) to expansive displays such as the 5K iMac Pro (5120 x 2880 px), ensuring a seamless user experience across a broad spectrum of screen sizes.
 
 #### W3C Markup Validator:
@@ -352,7 +370,7 @@ python manage.py test
 class Meta:
     verbose_name = "product"
     verbose_name_plural = "products"
-
+```
 
 ### Known bugs
   - Currently no known bugs.
@@ -385,16 +403,18 @@ This project is hosted on Heroku with a PostgreSQL database managed through Elep
 - Use the terminal to add, commit, and push your changes to Heroku.
 - In Heroku, go to the 'Deploy' tab, deploy your branch, and then access your application by clicking 'Open App'.
 
-## Credits
+### Credits
   - [Django documentation:](https://docs.djangoproject.com/en/4.2/) Everything you need to know about Django.
   - [Bootstrap documentation:](https://getbootstrap.com/docs/5.3/getting-started/introduction/) Bootstrap documentation used for styling and to build responsive web pages.
   - [Code Institute:](https://codeinstitute.net/)  I Think Therefore I Blog.
   - [Code Institute Slack Community:](https://app.slack.com/) Slack community for troubleshooting and FAQ.
   - [Code Institute Tutor Support:](https://app.slack.com/) For help and support.
   - [Stack Overflow:](https://stackoverflow.com) For troubleshooting and FAQ.
+  - [Template:](https://www.w3schools.com) Bootstrap Template.
   - [Unsplash:](https://unsplash.com/photos/NtkCemIfaiU) Man fishing on river at daytime photo, Chris Sarsgard.
   - [W3Schools:](https://www.w3schools.com) Online Web Tutorials.
-  
+
+
 ### Acknowledgements
 
-  - "I would like to extend my heartfelt thanks to Brian Macharia from Code Institute for his invaluable code reviews, assistance, and feedback throughout the development of this project. His guidance has been greatly appreciated.
+- "I would like to extend my heartfelt thanks to Brian Macharia from Code Institute for his invaluable code reviews, assistance, and feedback throughout the development of this project. His guidance has been greatly appreciated.
