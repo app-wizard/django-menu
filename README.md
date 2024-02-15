@@ -269,4 +269,122 @@ JSHint was used to validate the JavaScript with no errors highlighted.
 
 PEP8 Online linter (Python validator) The code passed without any errors on all files tested:
 
-#### Lighthouse:
+## Performance and Accessibility Report
+
+### Lighthouse Audit
+
+Our website underwent extensive testing with Google's Lighthouse tool, ensuring our commitment to best practices in web development. We are thrilled to report outstanding results across multiple metrics:
+
+- **Performance**: 98/100
+- **Accessibility**: 100/100
+- **Best Practices**: 100/100
+- **SEO**: 90/100
+
+![Lighthouse Report](media\lighthouse.jpg)
+
+These scores are a testament to our dedication to creating a fast, accessible, and search-engine friendly website. Lighthouse's thorough analysis simulates various conditions, providing us with a detailed report to fine-tune our site performance.
+
+> Performance is calculated directly from these metrics, reflecting the user's real-world experience on the site. For more details on how the performance score is calculated, see the [Lighthouse performance scoring calculator](https://web.dev/performance-scoring/).
+
+## Testing Strategy
+
+Our application's robustness is ensured through a combination of automated and manual testing. Below is a breakdown of how each user story was validated to meet its acceptance criteria.
+
+### Automated Tests
+
+#### Epic 1: User Account Management
+- **Create an Account**: Automated tests verify that the registration form is accessible from the homepage and requires a username, email, and password.
+- **Log In**: Automated tests ensure that the login form is accessible from the homepage and requires an email and password.
+- **Log Out**: Automatically tested to confirm that the logout option is easily accessible from the user's dashboard.
+- **Update Profile**: Automated tests check that users can access their profile settings from their dashboard.
+
+#### Epic 2: Site Stability and Performance
+- **Testing**: Automated tests cover critical pathways to ensure site stability.
+
+#### Epic 4: Reviews Management
+- **Leave Reviews**: Automated tests confirm that an authorized user can add a review to a dish.
+- **Display Reviews**: Automated tests verify that reviews are displayed on the product card.
+
+#### Epic 5: Menu Administration
+- **Setup Menu from Admin Panel**: Automated tests ensure that the admin can add and delete products from the menu.
+
+#### Epic 6: Website Setup and Deployment
+- **Setup and Deploy**: Automated testing confirms that the website is published and operational on Heroku.
+
+### Manual Tests
+
+#### Epic 3: Menu Interaction
+- **Electronic Menu**: Manually tested the display of products in the catalog with details.
+- **Search the Menu**: Manually verified the functionality of the search feature.
+- **Filter Option**: Conducted manual tests to ensure the filter for promotional items is functioning.
+- **Dish Availability Display**: Manually checked that each dish includes an indicator of its availability and that unavailable dishes are clearly distinguished.
+
+#### Epic 7: Customer Engagement and Feedback
+- **Collect Feedback**: Manually verified that the feedback form is available and functional on the website.
+- **Newsletter Subscription**: Manually tested the subscription process using the form on the homepage to ensure proper registration of user emails.
+
+### Testing Utilities
+
+Our automated tests are implemented using Django's `TestCase` class and include various aspects such as form validations, view accessibilities, and user interactions. Manual testing is conducted to complement automated tests, especially in areas where user interface and experience are crucial.
+
+### How to Run Tests
+
+To run the automated test suite, execute the following command in the terminal:
+python manage.py test
+
+### Solved Bugs
+
+#### Bug 1: Import Errors After Renaming `form.py` to `forms.py`
+
+**Issue**: We encountered import errors in our Django application after renaming `form.py` to the Django standard `forms.py`. The error was a result of the project's modules still referring to the old filename, causing the Django framework to fail to locate the new `forms.py` module.
+
+**Resolution**: The issue was systematically resolved by updating all import statements across the project to reflect the new filename. This refactoring included views, tests, and any other module that imported forms from the old `form.py`. After the corrections, the application's functionality was restored to normal.
+
+**Lessons Learned**: This bug underlined the importance of adhering to naming conventions from the start to prevent such issues. It also highlighted the value of thorough refactoring and search-and-replace techniques within the codebase when making such changes.
+
+#### Bug 2: Model Name in Plural Form
+
+**Issue**: An oversight led to a model being incorrectly named in the plural form, which is against the Django convention of using singular model names. This error manifested itself in the Django admin panel where the model was improperly represented.
+
+**Resolution**: Instead of performing a potentially risky and time-consuming database migration to rename the model, we implemented a workaround by using the `class Meta` inner class in the Django model definition. By setting `verbose_name` to "product" and `verbose_name_plural` to "products", we were able to correct the display in the admin panel without the need to alter the database schema.
+
+```python
+class Meta:
+    verbose_name = "product"
+    verbose_name_plural = "products"
+
+
+### Known bugs
+  - Currently no known bugs.
+
+## Deployment
+
+This project is hosted on Heroku with a PostgreSQL database managed through ElephantSQL. Follow these guidelines to deploy your own instance:
+
+- Access your Heroku dashboard to manage your applications.
+- Start a new app by selecting 'New' followed by 'Create new app'.
+- Assign a unique name to your app and choose your region.
+- After adding PostgreSQL, open the 'Settings' tab.
+- Locate 'Config Vars' and reveal them. Note down the `DATABASE_URL`.
+- Locally, within your project's directory, create a `env.py` file.
+- Inside `env.py`, assign your Heroku `DATABASE_URL` to `os.environ["DATABASE_URL"]`.
+- Generate a secure secret key and assign it to `os.environ["SECRET_KEY"]`.
+- Back in Heroku, in the 'Settings' tab, add your `SECRET_KEY` to the Config Vars.
+- Adjust your `settings.py`:
+  - Replace the existing secret key with `SECRET_KEY = os.environ.get('SECRET_KEY')`.
+  - Configure the `DATABASES` setting to use `DATABASE_URL` from the environment variables.
+- Commit your changes and apply the migrations with `python manage.py migrate`.
+- For handling static files and media, sign up for a Cloudinary account.
+- Copy the Cloudinary API Environment Variable.
+- Add this variable to your local `env.py` and also to Heroku's Config Vars as `CLOUDINARY_URL`.
+- Temporarily disable static files collection in Heroku by setting `DISABLE_COLLECTSTATIC` to 1.
+- Update your `settings.py` to include Cloudinary storage configurations.
+- Create directories named `media`, `static`, and `templates` at the root of your project.
+- In the root directory, create a `Procfile`.
+- Write your application's webserver command into the Procfile, e.g., `web: gunicorn your_project_name.wsgi`.
+- Use the terminal to add, commit, and push your changes to Heroku.
+- In Heroku, go to the 'Deploy' tab, deploy your branch, and then access your application by clicking 'Open App'.
+
+### Acknowledgements
+
+  - "I would like to extend my heartfelt thanks to Brian Macharia from Code Institute for his invaluable code reviews, assistance, and feedback throughout the development of this project. His guidance has been greatly appreciated.
