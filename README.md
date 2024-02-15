@@ -1,8 +1,8 @@
 # Lotus Pavilion - Asian Cuisine Web Menu
- - ![Lotus Pavilion](media\lotus.png)
+ - ![Lotus Pavilion](medialotus.png)
 
 ## Table of Contents
-1. [Start](#Lotus Pavilion)
+1. [Link to Website](https://django-menu-87d486944791.herokuapp.com/)
 2. [Introduction](#introduction)
 3. [Project Goal](#project-goal)
 4. [Strategy](#strategy)
@@ -74,68 +74,68 @@ For detailed descriptions and acceptance criteria of each user story, please vis
   - 
 - **Menu Navigation Button**
   - This functional button enables visitors to view all dishes or navigate to specific categories within the menu.
-  - ![Menu Navigation](media\scrnav.jpg)
+  - ![Menu Navigation](./media/scrnav.jpg)
 
 - **Information Section**
   - Offers detailed information about the restaurant, allowing visitors to learn more about what makes it special.
-  - ![Information Section](media\scrinfo.jpg)
+  - ![Information Section](./media/scrinfo.jpg)
 
 - **Delivery Information Section**
   - Provides essential details regarding delivery services.
-  - ![Delivery Information](media\scrdelivery.jpg)
+  - ![Delivery Information](./media/scrdelivery.jpg)
 
 - **About Us Information Section**
   - Provides essential details regarding company.
-  - ![About Us Information](media\scraboutus.jpg)
+  - ![About Us Information](./media/scraboutus.jpg)
 
 - **Sign In Section**
   - Directs users to a login page, where they can either sign in or proceed to register a new account.
-  - ![Sign In Section](media\scrsignin.jpg)
-  - ![Registration](media\scrreg.jpg)
+  - ![Sign In Section](./media/scrsignin.jpg)
+  - ![Registration](./media/scrreg.jpg)
   
 
 - **Administrator Access**
   - Admin users are provided with a dedicated admin panel for comprehensive site management.
-  - ![Administrator Access ](media\scradminmenu.jpg)
+  - ![Administrator Access ](./media/scradminmenu.jpg)
 
 - **User Profile Page**
   - A page that allows all users to update their personal information and customize their profile photo.
-  - ![User Profile Page ](media\scrprofile.jpg)
+  - ![User Profile Page ](./media/scrprofile.jpg)
 
 - **Full-text Search**
   - Embedded in the site's header, this feature supports efficient searches across the menu, with additional methods to prevent empty query searches.
-  - ![Full-text Search ](media\scrsearch.jpg)
-  - ![Full-text Search Empty ](media\scrsearch2.jpg)
+  - ![Full-text Search ](./media/scrsearch.jpg)
+  - ![Full-text Search Empty ](./media/scrsearch2.jpg)
 
 - **Search Results Page**
   - Displays either a "no results found" message for unsuccessful searches or a catalog page with items for successful searches.
-  - ![Search Results Page](media\scrsearchres1.jpg)
-  - ![Search Results Page](media\serachres2.jpg)
+  - ![Search Results Page](./media/scrsearchres1.jpg)
+  - ![Search Results Page](./media/serachres2.jpg)
 
 - **Catalog Page**
   - Showcases dishes from the menu with pricing and brief descriptions, complemented by pagination for easier navigation.
-  - ![Menu Page](media\scrmenu.jpg)
+  - ![Menu Page](./media/scrmenu.jpg)
 
 - **Filtering Functionality**
   - Allows users to filter dishes by discounts and sort them by ascending or descending prices.
-  - ![Filtering Functionality](media\scrfilter.jpg)
+  - ![Filtering Functionality](./media/scrfilter.jpg)
 
 - **Product Page**
   - By clicking on a dish card, users are taken to a detailed page where they can view an enlarged photo, and read or leave comments.
-  - ![Product Page](media\scrcard.jpg)
+  - ![Product Page](./media/scrcard.jpg)
 
 - **Comment Functionality**
   - Restricted to registered users for posting, with the ability to edit or delete their comments. Unconfirmed comments are only visible to their authors.
-  - ![Comment Functionality](media\scrcomment2.jpg)
+  - ![Comment Functionality](./media/scrcomment2.jpg)
 
 - **Pop-up Messages**
   - Utilizes convenient pop-up messages to notify users about various actions.
-  - ![Pop-up Messages](media\scrmssg.jpg)
+  - ![Pop-up Messages](./media/scrmssg.jpg)
 
 - **Admin Panel Customization**
   - For administrators, the admin panel has been customized for ease of use, including features for confirming comments and adjusting menu items and prices.
-  - ![Admin Panel 1](media\sxradmin1.jpg)
-  - ![Admin Panel 2](media\sxradmin2.jpg)
+  - ![Admin Panel 1](./media/sxradmin1.jpg)
+  - ![Admin Panel 2](./media/sxradmin2.jpg)
 
 ### Features to Implement in the Future
 
@@ -160,7 +160,7 @@ The design of the Lotus Pavilion web menu is a testament to the fusion of tradit
 The color scheme is a thoughtful selection of earthy tones, accented with the vibrant hues of Asian spices and the serene ambiance of a traditional lotus pond at dusk. This palette is harmoniously paired with a clean and contemporary typography that balances the visual warmth with crisp readability.
 
 ### Responsiveness and Interactivity
-![Lotus Pavilion](media\resp.jpg)
+![Lotus Pavilion](./media/resp.jpg)
 Attention to responsive design ensures that the site's allure is preserved across all devices, offering an inviting and seamless experience whether on desktop or mobile. Interactive elements, such as the filter dropdown and search functionality, are designed for intuitive engagement, inviting users to explore the menu with ease.
 
 ### Imagery and Aesthetics
@@ -184,7 +184,7 @@ The ERD encapsulates the relationships between these models, with `Product` bein
 
 Entity Relationship Diagram:
 
-![ERD](media\edr.png)
+![ERD](./media/edr.png)
 
 ### Imagery
 
@@ -252,7 +252,7 @@ Additionally, mobile testing was conducted on iOS devices with Safari Version 15
 - iPhone 12 Pro Max running iOS 17.3
 
 ### Responsiveness
-![Home page](media\resp.jpg)
+![Home page](./media/resp.jpg)
 Responsiveness was meticulously tested across various devices, from the compact iPhone 5 screen (320px wide) to expansive displays such as the 5K iMac Pro (5120 x 2880 px), ensuring a seamless user experience across a broad spectrum of screen sizes.
 
 #### W3C Markup Validator:
@@ -260,28 +260,28 @@ Responsiveness was meticulously tested across various devices, from the compact 
 The W3C Markup Validator were used to validate the HTML on all pages of the project to ensure there were no syntax errors in there. To validate the HTML files all Django template tags were manually removed with the HTML code copied and inserted to the base template.
 
 Home page:
-![Home page](media\valid1.jpg)
+![Home page](./media/valid1.jpg)
 
 Delivery page:
-![Delivery page](media\valid2.jpg)
+![Delivery page](./media/valid2.jpg)
 
 About Us page:
-![About Us page](media\valid3.jpg)
+![About Us page](./media/valid3.jpg)
 
 Profile page:
-![Profile Us page](media\valid4.jpg)
+![Profile Us page](./media/valid4.jpg)
 
 Catalog page:
-![Catalog Us page](media\valid5.jpg)
+![Catalog Us page](./media/valid5.jpg)
 
 Product page:
-![Product Us page](media\valid6.jpg)
+![Product Us page](./media/valid6.jpg)
 
 #### JSHint:
 
 JSHint was used to validate the JavaScript with no errors highlighted.
 
-![Jshint](media\jshint.jpg)
+![Jshint](./media/jshint.jpg)
 
 #### PEP8 Online:
 
@@ -298,7 +298,7 @@ Our website underwent extensive testing with Google's Lighthouse tool, ensuring 
 - **Best Practices**: 100/100
 - **SEO**: 90/100
 
-![Lighthouse Report](media\lighthouse.jpg)
+![Lighthouse Report](./media/lighthouse.jpg)
 
 These scores are a testament to our dedication to creating a fast, accessible, and search-engine friendly website. Lighthouse's thorough analysis simulates various conditions, providing us with a detailed report to fine-tune our site performance.
 
@@ -417,4 +417,4 @@ This project is hosted on Heroku with a PostgreSQL database managed through Elep
 
 ### Acknowledgements
 
-- "I would like to extend my heartfelt thanks to Brian Macharia from Code Institute for his invaluable code reviews, assistance, and feedback throughout the development of this project. His guidance has been greatly appreciated.
+- I would like to extend my heartfelt thanks to Brian Macharia from Code Institute for his invaluable code reviews, assistance, and feedback throughout the development of this project. His guidance has been greatly appreciated.
